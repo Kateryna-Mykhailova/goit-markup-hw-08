@@ -1,0 +1,91 @@
+/* Фильтры */
+.projects {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.projects-filter__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.projects-filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Герой portfolio page */
+
+.projects__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 0px;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+}
+.projects__item {
+  flex-basis: calc((100% - var(--card-set-gap) * 3) / 3);
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+
+.projects__link {
+  display: block;
+  text-decoration: none;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+.projects__link:hover .projects-img__overlay,
+.projects__link:focus .projects-img__overlay {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+.projects-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-img__overlay {
+  position: absolute;
+  height: 100%;
+  transform: translateY(0);
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-img__overlay-text {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--accent-text-color);
+}
+.projects__description {
+  padding: 20px 24px 20px 24px;
+  border-right: 1px solid var(--projects-description-border);
+  border-bottom: 1px solid var(--projects-description-border);
+  border-left: 1px solid var(--projects-description-border);
+  background: var(--header-bg);
+}
+
+.projects__title {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+}
+
+.projects__text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--primari-text-color);
+}

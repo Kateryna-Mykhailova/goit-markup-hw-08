@@ -1,0 +1,16 @@
+.logo {
+  font-family: Raleway, cursive;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.logo--dark {
+  color: var(--title-text-color);
+}
+
+.logo--light {
+  color: var(--accent-text-color);
+}

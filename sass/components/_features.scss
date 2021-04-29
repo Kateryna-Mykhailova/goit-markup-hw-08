@@ -1,0 +1,49 @@
+/* Преимущества */
+.features {
+  padding-top: 94px;
+}
+.features__topic {
+  color: var(--title-text-color);
+  margin-bottom: 10px;
+}
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 0px;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.features__item {
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc((100% - 30px * 4) / 4);
+
+  &::before {
+    display: block;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    content: '';
+    height: 120px;
+    background: var(--secondary-btn-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.icon-antenna::before {
+  background-image: url(../images/icon/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/icon/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/icon/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/icon/astronaut.svg);
+}
