@@ -68,11 +68,28 @@ img {
 }
 
 .container {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .logo {
@@ -307,9 +324,9 @@ img {
 }
 
 .overlay {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  height: 600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  height: 400px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -318,6 +335,18 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/img_hero_desktop.jpg);
+}
+
+@media screen and (max-width: 767.98px) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/img_hero_mobile.jpg);
+  }
+}
+
+@media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 192dpi), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/img@2x_hero_mobile.jpg);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -335,24 +364,15 @@ img {
 @media screen and (min-width: 1200px) {
   .overlay {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/img_hero_desktop.jpg);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .overlay {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/img@2x_hero_desktop.jpg);
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .overlay {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/img_hero_mobile.jpg);
-  }
-}
-
-@media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 192dpi), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
-  .overlay {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/img@2x_hero_mobile.jpg);
   }
 }
 
@@ -380,7 +400,14 @@ img {
 
 /* Преимущества */
 .features {
-  padding-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+  }
 }
 
 .features__topic {
@@ -388,19 +415,37 @@ img {
   margin-bottom: 10px;
 }
 
-.features__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0px;
-  padding: 0px;
-  margin-top: -30px;
-  margin-left: -30px;
+@media screen and (max-width: 767.98px) {
+  .features__topic {
+    text-align: center;
+  }
 }
 
-.features__item {
-  margin-top: 30px;
-  margin-left: 30px;
-  flex-basis: calc((100% - 30px * 4) / 4);
+.features__list {
+  margin: 0px;
+  padding: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
 }
 
 .features__item::before {
@@ -412,6 +457,28 @@ img {
   background: var(--secondary-btn-bg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+  .features__item {
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-basis: calc((100% - 30px * 2) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__item {
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-basis: calc((100% - 30px * 4) / 4);
+  }
+}
+
+@media screen and (max-width: 767.89px) {
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .icon-antenna::before {
