@@ -1,8 +1,12 @@
 /* Чем мы занимаемся */
 
 .work {
+  display: none;
   padding-top: 94px;
   padding-bottom: 94px;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 .work__list {
   display: flex;
