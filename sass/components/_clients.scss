@@ -14,9 +14,18 @@
 }
 
 .clients__items {
-  flex-basis: calc((100% - var(--card-set-gap) * 6) / 6);
   margin-top: var(--card-set-gap);
   margin-left: var(--card-set-gap);
+  @media screen and (max-width: 767px) {
+    flex-basis: calc((100% - var(--card-set-gap) * 2) / 2);
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - var(--card-set-gap) * 3) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - var(--card-set-gap) * 6) / 6);
+  }
 }
 
 .clients__link {

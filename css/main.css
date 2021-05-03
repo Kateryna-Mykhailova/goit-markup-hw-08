@@ -302,11 +302,18 @@ img {
 
 .section-title {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
   text-align: center;
   color: var(--title-text-color);
+  font-size: 28px;
+  line-height: 1.18px;
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .topic {
@@ -596,6 +603,12 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 .team__name {
   margin-bottom: 10px;
   font-weight: 500;
@@ -660,9 +673,26 @@ img {
 }
 
 .clients__items {
-  flex-basis: calc((100% - var(--card-set-gap) * 6) / 6);
   margin-top: var(--card-set-gap);
   margin-left: var(--card-set-gap);
+}
+
+@media screen and (max-width: 767px) {
+  .clients__items {
+    flex-basis: calc((100% - var(--card-set-gap) * 2) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients__items {
+    flex-basis: calc((100% - var(--card-set-gap) * 3) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__items {
+    flex-basis: calc((100% - var(--card-set-gap) * 6) / 6);
+  }
 }
 
 .clients__link {
