@@ -205,6 +205,21 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+.button-menu {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
+}
+
 /* Шапка */
 .header {
   background: var(--header-bg);
@@ -220,9 +235,29 @@ img {
   margin-right: 93px;
 }
 
+.icon-close-menu {
+  display: none;
+}
+
+.button-menu.is-open .icon-close-menu {
+  display: block;
+}
+
+.button-menu.is-open .icon-menu {
+  display: none;
+}
+
 /*Навигация*/
-.site-nav {
-  display: flex;
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+  }
 }
 
 .site-nav__item:not(:last-child) {
@@ -267,10 +302,18 @@ img {
 }
 
 /* Контакты */
-.contacts-header {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
+@media screen and (max-width: 767px) {
+  .contacts-header {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-header {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
 }
 
 .contacts-header__item:not(:last-child) {
