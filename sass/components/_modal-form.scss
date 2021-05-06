@@ -11,10 +11,14 @@
   font-family: Roboto;
   font-weight: bold;
   font-size: 20px;
-  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  @media screen and (max-width: 1199.98px) {
+  }
+  @media screen and (min-width: 1200px) {
+    line-height: 1.5;
+  }
 }
 .modal-form__field {
   display: flex;
@@ -123,9 +127,16 @@
 }
 
 .checkbox__text {
-  padding-left: 36px;
-  font-size: 14px;
-  line-height: 1.7;
+  @media screen and (max-width: 1199.98px) {
+    padding-left: 36px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-left: 36px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 .checkbox__link {
   font-size: 14px;
