@@ -41,6 +41,12 @@
   }
 }
 
+.projects__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+
 .projects__link {
   display: block;
   text-decoration: none;
@@ -79,6 +85,7 @@
   color: var(--accent-text-color);
 }
 .projects__description {
+  max-width: 100%;
   padding: 20px 24px 20px 24px;
   border-right: 1px solid var(--projects-description-border);
   border-bottom: 1px solid var(--projects-description-border);
