@@ -218,17 +218,31 @@ img {
 }
 
 .header__logo {
-  margin-right: 93px;
-  padding-left: 15px;
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 
 .button-menu {
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 100;
+  z-index: 150;
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -267,28 +281,24 @@ img {
 
 .mobile-menu {
   position: absolute;
+  display: none;
   width: 100%;
   height: 100vh;
-  min-height: 796px;
+  min-height: 810px;
   top: 0;
-  right: -100%;
+  left: 0;
   padding: 48px 40px;
   background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  z-index: 100;
 }
 
 .mobile-menu.is-open {
-  right: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .mobile-menu {
-    display: none;
-  }
+  display: block;
 }
 
 .mobile-nav {
-  margin-bottom: 302px;
+  margin-bottom: 300px;
 }
 
 .mobile-nav__item:not(:last-child) {
@@ -423,20 +433,26 @@ img {
 
 @media screen and (min-width: 768px) {
   .contacts-header {
-    display: flex;
     margin-left: auto;
-    align-items: center;
   }
 }
 
-.contacts-header__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .contacts-header {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-header__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .contacts-header__link {
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -449,6 +465,13 @@ img {
 
 .contacts-header__link:hover, .contacts-header__link:focus {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-header__link:hover, .contacts-header__link:focus {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contacts-header .icon {
@@ -1078,8 +1101,19 @@ img {
 
 .projects-filter__list {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-filter__list {
+    justify-content: center;
+  }
+}
+
+.projects-filter__item {
+  margin-bottom: 15px;
 }
 
 .projects-filter__item:not(:last-child) {
