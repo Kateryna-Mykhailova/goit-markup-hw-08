@@ -1302,6 +1302,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  margin: 0px;
   background: var(--header-bg);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1311,25 +1312,24 @@ img {
   transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1), opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199.98px) {
-  .modal {
-    min-width: 450px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .modal {
-    min-width: 528px;
-  }
-}
-
 /* Форма */
 .modal-form__conteiner {
   padding: 40px;
   margin-left: auto;
   margin-right: auto;
-  max-height: 609px;
-  max-width: 450px;
+  height: 609px;
+  width: 450px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__conteiner {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.modal-form {
+  margin: 0px;
 }
 
 .modal-form__title {
@@ -1345,7 +1345,9 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  line-height: 1.15;
+  .modal-form__title {
+    line-height: 1.15;
+  }
 }
 
 .modal-form__field {
@@ -1401,14 +1403,21 @@ img {
   padding: 12px 16px;
   margin-bottom: 20px;
   height: 120px;
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 14px;
+  line-height: 1.14px;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__comment {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .modal-form__comment:focus {
@@ -1428,11 +1437,18 @@ img {
 .checkbox {
   position: absolute;
   display: inline-block;
-  left: 12px;
+  left: 0px;
   top: 5px;
   width: 16px;
   height: 15px;
   background-image: url(../images/icon_form/checkoff.svg);
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox {
+    left: 12px;
+    top: 5px;
+  }
 }
 
 .checkbox__input {
@@ -1453,9 +1469,7 @@ img {
 }
 
 .checkbox__text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
+  padding-left: 24px;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.03em;
@@ -1464,7 +1478,6 @@ img {
 
 @media screen and (max-width: 1199.98px) {
   .checkbox__text {
-    padding-left: 32px;
     font-size: 12px;
     line-height: 1.7;
   }
