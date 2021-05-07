@@ -29,7 +29,9 @@
 }
 
 .footer__item:not(:last-child) {
-  margin-bottom: 60px;
+  @media screen and (max-width: 1199.89px) {
+    margin-bottom: 60px;
+  }
 }
 
 .footer__item {
